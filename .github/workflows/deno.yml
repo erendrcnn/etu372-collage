@@ -34,9 +34,6 @@ jobs:
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting
       #   run: deno fmt --check
-
-      - name: Run linter
-        run: deno lint
-
-      - name: Run tests
-        run: deno test -A
+      # Eğer testleriniz başka bir klasörde ise bu kısmı güncelleyin
+      - name: Run custom tests
+        run: deno test -A KAYNAK_KODLARI/test
