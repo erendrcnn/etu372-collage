@@ -118,10 +118,11 @@ Make sure you have the following prerequisites installed on your machine:
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-4. Navigate to the project directory and install additional dependencies:
+4. Create the MySQL database. (MySQL Comment Line Client)
    ```sh
-   cd Project-Name
-   pip install -r requirements.txt
+    create database school_management_system;
+    create user 'school_management_system'@'localhost' identified by 'password';
+    grant all privileges on *.* to 'school_management_system'@'localhost';
    ```
 5. Enter your MySQL database configuration in settings.py:
    ```sh
@@ -143,8 +144,8 @@ Make sure you have the following prerequisites installed on your machine:
    ```
 7. Populate the database by executing the SQL script (DBGenerator_app.sql) using a MySQL client like DBEAVER or MySQL Workbench.
    ```sh
-   python manage.py makemigrations
-   python manage.py migrate
+   python  C:\...\Project372\VERITABANI\DBGenerator_app.py
+   mysql -u school_management_system -p school_management_system < DBGenerator_app.sql
    ```
 8. Start the Django development server:
    ```sh
