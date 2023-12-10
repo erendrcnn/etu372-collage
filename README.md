@@ -1,5 +1,3 @@
-<a name="readme-top"></a>
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -70,12 +68,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/erendrcnn/etu372-collage/)
 
 ETU372 is a modern, user-friendly solution developed to meet the diverse needs of schools and educational organizations. The system focuses on providing an efficient and integrated platform to manage various aspects of school administration, including student information, attendance tracking, grade management, and communication between educators, students, and parents.
 
 
+## Screenshots
 
+[![Product Name Screen Shot1][product-screenshot1]](https://github.com/erendrcnn/etu372-collage/)
+[![Product Name Screen Shot2][product-screenshot2]](https://github.com/erendrcnn/etu372-collage/)
 
 
 ### Built With
@@ -250,6 +251,9 @@ Project Link: [https://github.com/erendrcnn/etu372-collage](https://github.com/e
 [linkedin-url]: https://linkedin.com/in
 -->
 [product-screenshot]: GORSELLER/screenshot.png
+[product-screenshot1]: GORSELLER/ÖĞRETMEN_KİŞİSEL_BİLGİLER.png
+[product-screenshot2]: GORSELLER/ÖĞRENCİ_HAFTALIK_PROGRAM.png
+[product-screenshot3]: GORSELLER/İDARE_OKUL_VERİTABANI.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
