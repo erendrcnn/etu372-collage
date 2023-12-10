@@ -1,0 +1,85 @@
+<!-- templates/haftalik_program.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../static/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/smart-webcomponents/source/styles/smart.default.css"/>
+
+    <title>ÖĞRENCİ PANELİ</title>
+    <link rel="shortcut icon" type="images" href="../../static/assets2/images/favicon.ico">
+</head>
+<body>
+<!-- Sidebar bg -->
+
+<!--
+<img src="../static/assets/img/sidebar-bg.jpg" alt="sidebar img" class="bg-image">
+  -->
+
+<!--=============== HEADER ===============-->
+<header class="header">
+    <div class="header__container container">
+        <div class="header__toggle" id="header-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <!--
+       <a href="#" class="header__logo">
+          <img src="../static/assets/img/yt-logo-full.svg" alt="">
+       </a>
+       -->
+    </div>
+</header>
+
+{% include 'ogrenci/ogrenci_sidebar.html' %}
+
+<!--=============== MAIN ===============-->
+<main class="main container" id="main">
+    <head>
+        <title>Haftalık Program</title>
+    </head>
+    <body>
+    <smart-table id="table"></smart-table>
+    <h1>Haftalık Program</h1>
+    <form method="post" action="{% url 'ogrenci_haftalik_program' %}">
+        {% csrf_token %}
+        <table border="1">
+            <tr>
+                <th>Saat</th>
+                {% for gun in gunler %}
+                    <th>{{ gun }}</th>
+                {% endfor %}
+            </tr>
+            {% for saat in saatler %}
+                <tr>
+                    <td>{{ saat }} - {{ saat|add:1 }}</td>
+                    {% for gun in gunler %}
+                        <td>
+                            {% for alinan_ders in program %}
+                                {% if alinan_ders.2 == gun %}
+                                    {% if alinan_ders.1 == saat %}
+                                        {{ alinan_ders.0 }}
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+    </body>
+</main>
+
+<!--=============== MAIN JS ===============-->
+<script src="../../static/assets/js/main.js"></script>
+</body>
+</html>

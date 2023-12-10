@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../static/assets/css/styles.css">
+
+    <title>ÖĞRETMEN PANELİ</title>
+    <link rel="shortcut icon" type="images" href="../../static/assets2/images/favicon.ico">
+</head>
+<body>
+<!-- Sidebar bg -->
+
+<!--
+<img src="../static/assets/img/sidebar-bg.jpg" alt="sidebar img" class="bg-image">
+  -->
+
+<!--=============== HEADER ===============-->
+<header class="header">
+    <div class="header__container container">
+        <div class="header__toggle" id="header-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+        <!--
+       <a href="#" class="header__logo">
+          <img src="../static/assets/img/yt-logo-full.svg" alt="">
+       </a>
+       -->
+    </div>
+</header>
+
+<!--=============== SIDEBAR ===============-->
+<div class="sidebar" id="sidebar">
+    <nav class="sidebar__container">
+        <div class="sidebar__logo">
+            <img src="../static/assets2/images/logo_vec.svg" alt="" class="sidebar__logo-img">
+            <img src="../static/assets2/images/logo_vec_text.svg" alt="" class="sidebar__logo-text">
+        </div>
+
+        <div class="sidebar__content">
+            <h3 class="sidebar__title">
+                <span>Genel</span>
+            </h3>
+
+            <div class="sidebar__list">
+
+                <a href="dashboard" class="sidebar__link active-link">
+                    <i class="ri-home-5-line"></i>
+                    <span class="sidebar__link-name">Anasayfa</span>
+                    <span class="sidebar__link-floating">Anasayfa</span>
+                </a>
+
+                <a href="kisiselBilgiler" class="sidebar__link">
+                    <i class="ri-user-3-line"></i>
+                    <span class="sidebar__link-name">Kişisel Bilgiler</span>
+                    <span class="sidebar__link-floating">Kişisel Bilgiler</span>
+                </a>
+
+                <a href="haftalikProgram" class="sidebar__link">
+                    <i class="ri-compass-3-line"></i>
+                    <span class="sidebar__link-name">Haftalık Program</span>
+                    <span class="sidebar__link-floating">Haftalık Program</span>
+                </a>
+            </div>
+
+            <h3 class="sidebar__title">
+                <span>Hesap</span>
+            </h3>
+
+            <a href="logout" class="sidebar__link">
+                <i class="ri-logout-box-r-line"></i>
+                <span class="sidebar__link-name">Logout</span>
+                <span class="sidebar__link-floating">Logout</span>
+            </a>
+        </div>
+
+        <div class="sidebar__account">
+            <!--
+        <img src="../static/assets/img/perfil.png" alt="sidebar image" class="sidebar__perfil">
+        -->
+
+            <div class="sidebar__names">
+                <h3 class="sidebar__name">{{ AktifOgrenci.Ad }}</h3>
+                <span class="sidebar__email">{{ AktifOgrenci.Email }}</span>
+            </div>
+
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+    </nav>
+</div>
+
+<!--=============== MAIN ===============-->
+<main class="main container" id="main">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Öğretmen Bilgileri</title>
+        <style>
+            .info-box {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    <form method="post" action="{% url 'ogretmen_kisiselBilgiler' %}">
+        {% csrf_token %}
+        <div class="info-box">
+            <h1>Öğretmen Bilgileri</h1>
+            <div>
+                <label for="id_ad">Ad:</label>
+                <input type="text" id="id_ad" name="ad" value="{{ user.1 }}" readonly>
+            </div>
+            <div>
+                <label for="id_soyad">Soyad:</label>
+                <input type="text" id="id_soyad" name="soyad" value="{{ user.2 }}" readonly>
+            </div>
+            <div>
+                <label for="id_adres">Adres:</label>
+                <input type="text" id="id_adres" name="adres" value="{{ user.3 }}" readonly>
+            </div>
+            <div>
+                <label for="id_telefon">Telefon:</label>
+                <input type="text" id="id_telefon" name="telefon" value="{{ user.4 }}" readonly>
+            </div>
+            <div>
+                <label for="id_email">E-Mail:</label>
+                <input type="text" id="id_email" name="email" value="{{ user.5 }}" readonly>
+            </div>
+            <div>
+                <label for="id_maas">Maas:</label>
+                <input type="text" id="id_maas" name="maas" value="{{ user.6 }} TL" readonly>
+            </div>
+            <div>
+                <label for="id_baslangictarihi">Başlangıç Tarihi:</label>
+                <input type="text" id="id_baslangictarihi" name="baslangictarihi" value="{{ user.7 }}" readonly>
+            </div>
+            <div>
+                <label for="id_deneyimsuresi">Deneyim Süresi:</label>
+                <input type="text" id="id_deneyimsuresi" name="deneyimsuresi" value="{{ user.8 }} Yıl" readonly>
+            </div>
+
+        </div>
+        <button type="button" onclick="openPopup()">Düzenle</button>
+        <input type="submit" value="Bilgileri Kaydet">
+
+        <!-- Popup Penceresi -->
+        <div id="popupEdit" class="popOut" style="display:none;">
+            <div class="popOut-content">
+                <h2>Öğretmen Bilgilerini Düzenle</h2>
+                <!-- Popup içindeki form alanları -->
+                <label for="popup_ad">Ad:</label>
+                <input type="text" id="popup_ad" name="ad">
+                <label for="popup_soyad">Soyad:</label>
+                <input type="text" id="popup_soyad" name="soyad">
+                <label for="popup_adres">Adres:</label>
+                <input type="text" id="popup_adres" name="adres">
+                <label for="popup_telefon">Telefon:</label>
+                <input type="text" id="popup_telefon" name="telefon">
+
+                <!-- ... diğer form alanları için benzer inputlar ... -->
+
+                <button type="button" onclick="submitPopup()">Kaydet</button>
+            </div>
+        </div>
+    </form>
+    </body>
+</main>
+
+<!--=============== MAIN JS ===============-->
+<script src="../../static/assets/js/main.js"></script>
+<script>
+    var modal = document.getElementById("myModel");
+    var btn = document.getElementById("click");
+    console.log("hii");
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    function validateNumber(number) {
+        return !isNaN(number);
+    }
+
+    function validateText(text, minLength, maxLength) {
+        var textLength = text.length;
+        return textLength >= minLength && textLength <= maxLength;
+    }
+
+    function openPopup() {
+        // Form alanlarının mevcut değerlerini popup'a kopyala
+        document.getElementById("popup_ad").value = document.getElementById("id_ad").value;
+        document.getElementById("popup_soyad").value = document.getElementById("id_soyad").value;
+        document.getElementById("popup_adres").value = document.getElementById("id_adres").value;
+        document.getElementById("popup_telefon").value = document.getElementById("id_telefon").value;
+        // ... diğer form alanları için benzer işlemler ...
+
+        document.getElementById("popupEdit").style.display = "block";
+    }
+
+    function submitPopup() {
+        // Değerleri al
+        var telefon = document.getElementById("popup_telefon").value;
+        var ad = document.getElementById("popup_ad").value;
+        var soyad = document.getElementById("popup_soyad").value;
+        var adres = document.getElementById("popup_adres").value;
+
+        // Doğrulama
+        if (!validateText(ad, 2, 50)) {
+            alert("Lütfen geçerli bir ad girin.");
+            return;
+        }
+        if (!validateText(soyad, 2, 50)) {
+            alert("Lütfen geçerli bir soyad girin.");
+            return;
+        }
+        if (!validateText(adres, 2, 100)) {
+            alert("Lütfen geçerli bir adres girin.");
+            return;
+        }
+        if (!validateNumber(telefon)) {
+            alert("Lütfen geçerli bir telefon numarası girin.");
+            return;
+        }
+
+        // Popup'taki değerleri ana form alanlarına aktar
+        document.getElementById("id_ad").value = document.getElementById("popup_ad").value;
+        document.getElementById("id_soyad").value = document.getElementById("popup_soyad").value;
+        document.getElementById("id_adres").value = document.getElementById("popup_adres").value;
+        document.getElementById("id_telefon").value = document.getElementById("popup_telefon").value;
+        // ... diğer form alanları için benzer işlemler ...
+
+        document.getElementById("popupEdit").style.display = "none";
+    }
+</script>
+</body>
+</html>

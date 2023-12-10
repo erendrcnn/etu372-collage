@@ -1,0 +1,84 @@
+{% load static %}
+{% include 'home/navbar.html' %}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETU372 College | Ana Sayfa</title>
+    <link rel="shortcut icon" type="images" href="../../static/assets2/images/favicon.ico">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../../static/assets2/css/style.css">
+
+
+</head>
+
+<body>
+
+<!-- home section starts  -->
+
+<section class="home">
+
+    <div class="image">
+        <img src="../../static/assets2/images/home-img.png" alt="">
+    </div>
+
+    <div class="content">
+        <h3>Eğitime yeni bir bakış açısı</h3>
+        <p>Öğrenci yönetim sistemimizle başarıya ulaşıyoruz.</p>
+        <a href="map.html" class="btn">Okula haritadan bak</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- categories section starts  -->
+
+<section class="category">
+
+    <a href="#" class="box">
+        <img src="../../static/assets2/images/category-1.png" alt="">
+        <h3>computer science</h3>
+    </a>
+
+    <a href="#" class="box">
+        <img src="../../static/assets2/images/category-2.png" alt="">
+        <h3>biology & life</h3>
+    </a>
+
+    <a href="#" class="box">
+        <img src="../../static/assets2/images/category-3.png" alt="">
+        <h3>business analysis</h3>
+    </a>
+
+    <a href="#" class="box">
+        <img src="../../static/assets2/images/category-4.png" alt="">
+        <h3>social science</h3>
+    </a>
+
+    <a href="#" class="box">
+        <img src="../../static/assets2/images/category-5.png" alt="">
+        <h3>data analysis</h3>
+    </a>
+
+</section>
+
+<!-- categories section ends -->
+
+{% include 'home/footer.html' %}
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../static/assets/css/styles.css">
+
+    <title>ÖĞRENCİ PANELİ</title>
+    <link rel="shortcut icon" type="images" href="../../static/assets2/images/favicon.ico">
+</head>
+<body>
+<!-- Sidebar bg -->
+
+<!--
+<img src="../static/assets/img/sidebar-bg.jpg" alt="sidebar img" class="bg-image">
+  -->
+
+<!--=============== HEADER ===============-->
+<header class="header">
+    <div class="header__container container">
+        <div class="header__toggle" id="header-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <!--
+       <a href="#" class="header__logo">
+          <img src="../static/assets/img/yt-logo-full.svg" alt="">
+       </a>
+       -->
+    </div>
+</header>
+
+{% include 'ogrenci/ogrenci_sidebar.html' %}
+
+<!--=============== MAIN ===============-->
+<main class="main container" id="main">
+    <div class="welcome-message">
+        Hoş Geldin, {{ user.1 }} {{ user.2 }}
+    </div>
+</main>
+
+<!--=============== MAIN JS ===============-->
+<script src="../../static/assets/js/main.js"></script>
+</body>
+</html>

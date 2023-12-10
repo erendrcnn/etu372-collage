@@ -1,0 +1,176 @@
+-- USE DBNAME;
+USE proje;
+
+-- Delete statements for all tables
+DELETE FROM IDARI_PERSONEL; DELETE FROM TEMIZLIK_GOREVLISI; DELETE FROM FULL_TIME_OGRETMEN; DELETE FROM PART_TIME_OGRETMEN_MESGULIYET; DELETE FROM PART_TIME_OGRETMEN; DELETE FROM MEZUN_OGRENCI; DELETE FROM VELI; DELETE FROM AKTIF_OGRENCI_MESGULIYET; DELETE FROM AKTIF_OGRENCIDERS; DELETE FROM EK_GIDER; DELETE FROM MALZEMEDERS; DELETE FROM MALZEME; DELETE FROM SABIT_GIDER; DELETE FROM AKTIF_DERS; DELETE FROM DERS; DELETE FROM AKTIF_OGRENCI; DELETE FROM HAFTANIN_SAATLERI;
+
+-- Insert statements for HAFTANIN_SAATLERI
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (56, '07:00:00', '08:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (57, '08:00:00', '09:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (58, '09:00:00', '10:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (59, '10:00:00', '11:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (60, '11:00:00', '12:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (61, '12:00:00', '13:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (62, '13:00:00', '14:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (63, '14:00:00', '15:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (64, '15:00:00', '16:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (65, '16:00:00', '17:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (66, '17:00:00', '18:00:00', 'Pazartesi');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (67, '07:00:00', '08:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (68, '08:00:00', '09:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (69, '09:00:00', '10:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (70, '10:00:00', '11:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (71, '11:00:00', '12:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (72, '12:00:00', '13:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (73, '13:00:00', '14:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (74, '14:00:00', '15:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (75, '15:00:00', '16:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (76, '16:00:00', '17:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (77, '17:00:00', '18:00:00', 'Sali');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (78, '07:00:00', '08:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (79, '08:00:00', '09:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (80, '09:00:00', '10:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (81, '10:00:00', '11:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (82, '11:00:00', '12:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (83, '12:00:00', '13:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (84, '13:00:00', '14:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (85, '14:00:00', '15:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (86, '15:00:00', '16:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (87, '16:00:00', '17:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (88, '17:00:00', '18:00:00', 'Carsamba');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (89, '07:00:00', '08:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (90, '08:00:00', '09:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (91, '09:00:00', '10:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (92, '10:00:00', '11:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (93, '11:00:00', '12:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (94, '12:00:00', '13:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (95, '13:00:00', '14:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (96, '14:00:00', '15:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (97, '15:00:00', '16:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (98, '16:00:00', '17:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (99, '17:00:00', '18:00:00', 'Persembe');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (100, '07:00:00', '08:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (101, '08:00:00', '09:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (102, '09:00:00', '10:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (103, '10:00:00', '11:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (104, '11:00:00', '12:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (105, '12:00:00', '13:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (106, '13:00:00', '14:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (107, '14:00:00', '15:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (108, '15:00:00', '16:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (109, '16:00:00', '17:00:00', 'Cuma');
+INSERT INTO HAFTANIN_SAATLERI (SaatGunID, BaslangicVakti, BitisVakti, Gun) VALUES (110, '17:00:00', '18:00:00', 'Cuma');
+
+-- Insert statements for IDARI_PERSONEL
+INSERT INTO IDARI_PERSONEL (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, Unvan) VALUES (21, 'TUMAY', 'YAMAN', 'Golbasi', '05440104165', 'example80@yahoo.com', 4460.663561717383, '2008-11-24', 15, NULL);
+INSERT INTO IDARI_PERSONEL (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, Unvan) VALUES (22, 'NURAY', 'AKINCI', 'Akyurt', '05143432906', 'example47@gmail.com', 7684.691620531141, '2005-05-14', 9, NULL);
+INSERT INTO IDARI_PERSONEL (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, Unvan) VALUES (23, 'DENIZ', 'PEKTAS', 'Sincan', '05230846897', 'example23@etu.edu.tr', 4028.6157393977737, '2017-07-05', 5, NULL);
+INSERT INTO IDARI_PERSONEL (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, Unvan) VALUES (24, 'SENAY', 'KUTLUCAN BAGCI', 'Sereflikochisar', '05953364072', 'example26@yahoo.com', 5784.2347739123015, '2021-10-20', 19, NULL);
+INSERT INTO IDARI_PERSONEL (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, Unvan) VALUES (25, 'TESLIME NAZLI', 'KAZBEK', 'Beypazari', '05871841635', 'example17@outlook.com', 6835.452450547505, '2007-01-03', 17, NULL);
+
+-- Insert statements for TEMIZLIK_GOREVLISI
+INSERT INTO TEMIZLIK_GOREVLISI (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, CalismaYeri) VALUES (26, 'MERAL LEMAN', 'AKINCI', 'Gudul', '05348773100', 'example41@icloud.com', 3539.1017832180814, '2020-07-05', 14, NULL);
+INSERT INTO TEMIZLIK_GOREVLISI (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, CalismaYeri) VALUES (27, 'MAHMUT', 'TEMEL', 'Polatli', '05774206189', 'example1@yahoo.com', 6714.907843296674, '2009-07-19', 21, NULL);
+INSERT INTO TEMIZLIK_GOREVLISI (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, CalismaYeri) VALUES (28, 'GULDEHEN', 'KUTLU', 'Polatli', '05660447679', 'example60@gmail.com', 5839.983043057235, '2005-10-15', 3, NULL);
+INSERT INTO TEMIZLIK_GOREVLISI (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, CalismaYeri) VALUES (29, 'YILDIZ', 'YiGiT', 'Kizilcahamam', '05652620920', 'example9@gmail.com', 2455.7587714423985, '2022-01-02', 15, NULL);
+INSERT INTO TEMIZLIK_GOREVLISI (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi, CalismaYeri) VALUES (30, 'FULYA', 'CENGiZ', 'Kecioren', '05593890757', 'example83@gmail.com', 5287.30686838062, '2022-04-18', 2, NULL);
+
+-- Insert statements for FULL_TIME_OGRETMEN
+INSERT INTO FULL_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (31, 'BENGU', 'CINDEMIR', 'Kalecik', '05735520846', 'example21@icloud.com', 5868.845391447643, '2003-06-20', 7);
+INSERT INTO FULL_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (32, 'ZEYNEP', 'SURUM', 'Elmadag', '05338492535', 'example4@gmail.com', 9254.050267504332, '2023-09-09', 8);
+INSERT INTO FULL_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (33, 'ERGUN', 'AYHAN', 'Sincan', '05157925002', 'example78@icloud.com', 8902.325290310784, '2005-02-18', 28);
+INSERT INTO FULL_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (34, 'SEVGI', 'ONER', 'Cankaya', '05121863476', 'example60@etu.edu.tr', 7752.024010126266, '2000-03-01', 5);
+INSERT INTO FULL_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (35, 'SERHAT', 'AYDOGAN', 'Mamak', '05877027559', 'example100@etu.edu.tr', 2495.8656179044665, '2023-08-24', 16);
+
+-- Insert statements for PART_TIME_OGRETMEN
+INSERT INTO PART_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (36, 'RABIA', 'AKINCI', 'Haymana', '05178059448', 'example78@etu.edu.tr', 6489.195906796732, '2010-12-10', 10);
+INSERT INTO PART_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (37, 'MEHRI', 'TEMEL', 'Golbasi', '05211220503', 'example16@gmail.com', 2133.273111281546, '2022-03-17', 18);
+INSERT INTO PART_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (38, 'YASER', 'YUKSEL', 'Elmadag', '05452272834', 'example39@icloud.com', 7794.129005255045, '2014-11-03', 9);
+INSERT INTO PART_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (39, 'HALIL', 'OZDEMiR', 'Kalecik', '05705335748', 'example8@icloud.com', 8111.438759516175, '2000-03-19', 30);
+INSERT INTO PART_TIME_OGRETMEN (CalisanID, CalisanAdi, CalisanSoyadi, CalisanAdresi, CalisanTel, CalisanEmail, Maas, BaslangicTarihi, DeneyimSuresi) VALUES (40, 'KURSAT', 'PiSiRGEN', 'Gudul', '05498345787', 'example53@icloud.com', 2116.3667779213943, '2016-01-25', 21);
+
+
+-- Insert statements for PART_TIME_OGRETMEN_MESGULIYET
+INSERT INTO PART_TIME_OGRETMEN_MESGULIYET (CalisanID, SaatGunID, Sebep) VALUES (36, 48, 'Hastalik');
+INSERT INTO PART_TIME_OGRETMEN_MESGULIYET (CalisanID, SaatGunID, Sebep) VALUES (37, 24, 'Toplanti');
+INSERT INTO PART_TIME_OGRETMEN_MESGULIYET (CalisanID, SaatGunID, Sebep) VALUES (38, 30, 'Seminer');
+INSERT INTO PART_TIME_OGRETMEN_MESGULIYET (CalisanID, SaatGunID, Sebep) VALUES (39, 29, 'Seminer');
+INSERT INTO PART_TIME_OGRETMEN_MESGULIYET (CalisanID, SaatGunID, Sebep) VALUES (40, 54, 'Toplanti');
+
+-- Insert statements for AKTIF_OGRENCI
+INSERT INTO AKTIF_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, GPA) VALUES (6, 'KUBILAY', 'TEMEL', '201357388', '05584639791', 'example16@etu.edu.tr', 'Golbasi', 3.566426662902853);
+INSERT INTO AKTIF_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, GPA) VALUES (7, 'EBRU', 'GiRAY', '201346091', '05460871154', 'example5@outlook.com', 'Altindag', 3.489215315077648);
+INSERT INTO AKTIF_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, GPA) VALUES (8, 'AHMET ALI', 'TUTEN', '201163602', '05783466612', 'example14@etu.edu.tr', 'Polatli', 2.1522781888294378);
+INSERT INTO AKTIF_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, GPA) VALUES (9, 'ZUMRUT ELA', 'SEN', '201203164', '05964727041', 'example74@yahoo.com', 'Akyurt', 2.2999118824305844);
+INSERT INTO AKTIF_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, GPA) VALUES (10, 'ERGUN', 'AKINCI', '201213467', '05179649531', 'example9@yahoo.com', 'Golbasi', 3.055061422121189);
+
+-- Insert statements for MEZUN_OGRENCI
+INSERT INTO MEZUN_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, MezuniyetGPA, MezuniyetTarihi) VALUES (506, 'MEHMET', 'KUFECiLER', '201361810', '05647230007', 'example30@yahoo.com', 'Camlidere', 3.3789214766642814, '2005-04-25');
+INSERT INTO MEZUN_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, MezuniyetGPA, MezuniyetTarihi) VALUES (507, 'TARKAN', 'BALCI', '201968810', '05786365951', 'example17@gmail.com', 'Kecioren', 3.563123662330483, '2020-07-18');
+INSERT INTO MEZUN_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, MezuniyetGPA, MezuniyetTarihi) VALUES (508, 'KAMIL', 'COMERT', '201125232', '05369789328', 'example20@icloud.com', 'Golbasi', 2.8370091832677065, '2020-11-06');
+INSERT INTO MEZUN_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, MezuniyetGPA, MezuniyetTarihi) VALUES (509, 'IBRAHIM', 'YILMAZ', '201148190', '05971783226', 'example23@etu.edu.tr', 'Nallihan', 3.4710700793021267, '2022-12-21');
+INSERT INTO MEZUN_OGRENCI (OgrenciID, OgrenciAdi, OgrenciSoyadi, OgrenciNumarasi, OgrenciTel, OgrenciEmail, OgrenciAdres, MezuniyetGPA, MezuniyetTarihi) VALUES (510, 'YUSUF KENAN', 'ONUK', '201420687', '05585600173', 'example83@yahoo.com', 'Etimesgut', 2.178525217101409, '2019-07-03');
+
+-- Insert statements for VELI
+INSERT INTO VELI (VeliID, OgrenciID, VeliAdi, VeliSoyadi, VeliTel, VeliEmail) VALUES (6, 1, 'YASAR GOKHAN', 'SEZER', '05206688981', 'example60@etu.edu.tr');
+INSERT INTO VELI (VeliID, OgrenciID, VeliAdi, VeliSoyadi, VeliTel, VeliEmail) VALUES (7, 2, 'BASAK', 'CEViK', '05339055522', 'example90@outlook.com');
+INSERT INTO VELI (VeliID, OgrenciID, VeliAdi, VeliSoyadi, VeliTel, VeliEmail) VALUES (8, 3, 'ISMAIL', 'CINDEMIR', '05615412195', 'example22@outlook.com');
+INSERT INTO VELI (VeliID, OgrenciID, VeliAdi, VeliSoyadi, VeliTel, VeliEmail) VALUES (9, 4, 'REYHAN', 'BODUROGLU', '05108293373', 'example67@etu.edu.tr');
+INSERT INTO VELI (VeliID, OgrenciID, VeliAdi, VeliSoyadi, VeliTel, VeliEmail) VALUES (10, 5, 'NAGIHAN', 'TANRIKULU', '05449643851', 'example41@gmail.com');
+
+-- Insert statements for AKTIF_OGRENCI_MESGULIYET
+INSERT INTO AKTIF_OGRENCI_MESGULIYET (OgrenciID, SaatGunID, Sebep) VALUES (1, 46, 'Konferans');
+INSERT INTO AKTIF_OGRENCI_MESGULIYET (OgrenciID, SaatGunID, Sebep) VALUES (2, 14, 'Toplanti');
+INSERT INTO AKTIF_OGRENCI_MESGULIYET (OgrenciID, SaatGunID, Sebep) VALUES (3, 44, 'Seminer');
+INSERT INTO AKTIF_OGRENCI_MESGULIYET (OgrenciID, SaatGunID, Sebep) VALUES (4, 53, 'Izinli');
+INSERT INTO AKTIF_OGRENCI_MESGULIYET (OgrenciID, SaatGunID, Sebep) VALUES (5, 44, 'Seminer');
+
+-- Insert statements for DERS
+INSERT INTO DERS (DersID, DersAdi, DersKodu) VALUES (6, 'Geometri', 'D697');
+INSERT INTO DERS (DersID, DersAdi, DersKodu) VALUES (7, 'Edebiyat', 'D757');
+INSERT INTO DERS (DersID, DersAdi, DersKodu) VALUES (8, 'Matematik', 'D322');
+INSERT INTO DERS (DersID, DersAdi, DersKodu) VALUES (9, 'Turkce', 'D345');
+INSERT INTO DERS (DersID, DersAdi, DersKodu) VALUES (10, 'Yazilim', 'D423');
+
+-- Insert statements for AKTIF_DERS
+INSERT INTO AKTIF_DERS (AktifDersID, DersID, Syllabus, DersSaati) VALUES (6, 6, 'Syllabus Content', NULL);
+INSERT INTO AKTIF_DERS (AktifDersID, DersID, Syllabus, DersSaati) VALUES (7, 10, 'Syllabus Content', NULL);
+INSERT INTO AKTIF_DERS (AktifDersID, DersID, Syllabus, DersSaati) VALUES (8, 8, 'Syllabus Content', NULL);
+INSERT INTO AKTIF_DERS (AktifDersID, DersID, Syllabus, DersSaati) VALUES (9, 2, 'Syllabus Content', NULL);
+INSERT INTO AKTIF_DERS (AktifDersID, DersID, Syllabus, DersSaati) VALUES (10, 3, 'Syllabus Content', NULL);
+
+-- Insert statements for AKTIF_OGRENCIDERS
+INSERT INTO AKTIF_OGRENCIDERS (AktifDersID, OgrenciID) VALUES (7, 1);
+INSERT INTO AKTIF_OGRENCIDERS (AktifDersID, OgrenciID) VALUES (5, 2);
+INSERT INTO AKTIF_OGRENCIDERS (AktifDersID, OgrenciID) VALUES (4, 3);
+INSERT INTO AKTIF_OGRENCIDERS (AktifDersID, OgrenciID) VALUES (1, 4);
+INSERT INTO AKTIF_OGRENCIDERS (AktifDersID, OgrenciID) VALUES (9, 5);
+
+-- Insert statements for EK_GIDER
+INSERT INTO EK_GIDER (GiderID, GiderAciklamasi, GiderMiktari, GiderTarihi) VALUES (11, 'Su Faturasi', 8517.302769082162, '2018-03-18');
+INSERT INTO EK_GIDER (GiderID, GiderAciklamasi, GiderMiktari, GiderTarihi) VALUES (12, 'Bakim Giderleri', 2993.419033442617, '2017-10-02');
+INSERT INTO EK_GIDER (GiderID, GiderAciklamasi, GiderMiktari, GiderTarihi) VALUES (13, 'Dogalgaz Faturasi', 2579.5434975136855, '2011-11-10');
+INSERT INTO EK_GIDER (GiderID, GiderAciklamasi, GiderMiktari, GiderTarihi) VALUES (14, 'Dogalgaz Faturasi', 7634.847047685458, '2004-01-04');
+INSERT INTO EK_GIDER (GiderID, GiderAciklamasi, GiderMiktari, GiderTarihi) VALUES (15, 'Bakim Giderleri', 3194.8997846033517, '2006-02-08');
+
+-- Insert statements for MALZEME
+INSERT INTO MALZEME (MalzemeID, MalzemeMiktari, MalzemeFiyat, MalzemeTuru, GiderID) VALUES (6, 91, 9615.936289165253, 'Kitap', NULL);
+INSERT INTO MALZEME (MalzemeID, MalzemeMiktari, MalzemeFiyat, MalzemeTuru, GiderID) VALUES (7, 35, 8576.54275758369, 'Tahta Kalemi', NULL);
+INSERT INTO MALZEME (MalzemeID, MalzemeMiktari, MalzemeFiyat, MalzemeTuru, GiderID) VALUES (8, 41, 2124.263730711705, 'Kitap', NULL);
+INSERT INTO MALZEME (MalzemeID, MalzemeMiktari, MalzemeFiyat, MalzemeTuru, GiderID) VALUES (9, 57, 7618.008105891076, 'Defter', NULL);
+INSERT INTO MALZEME (MalzemeID, MalzemeMiktari, MalzemeFiyat, MalzemeTuru, GiderID) VALUES (10, 42, 5126.290423261837, 'Silgi', NULL);
+
+-- Insert statements for MALZEMEDERS
+INSERT INTO MALZEMEDERS (AktifDersID, MalzemeID) VALUES (8, 6);
+INSERT INTO MALZEMEDERS (AktifDersID, MalzemeID) VALUES (10, 7);
+INSERT INTO MALZEMEDERS (AktifDersID, MalzemeID) VALUES (3, 8);
+INSERT INTO MALZEMEDERS (AktifDersID, MalzemeID) VALUES (9, 9);
+INSERT INTO MALZEMEDERS (AktifDersID, MalzemeID) VALUES (2, 10);
+
+-- Insert statements for SABIT_GIDER
+INSERT INTO SABIT_GIDER (GiderID, GiderAciklamasi, GiderMiktari) VALUES (16, 'Dogalgaz Faturasi', 5867.106103397498);
+INSERT INTO SABIT_GIDER (GiderID, GiderAciklamasi, GiderMiktari) VALUES (17, 'Elektrik Faturasi', 5013.3167366736725);
+INSERT INTO SABIT_GIDER (GiderID, GiderAciklamasi, GiderMiktari) VALUES (18, 'Dogalgaz Faturasi', 3400.3290276490416);
+INSERT INTO SABIT_GIDER (GiderID, GiderAciklamasi, GiderMiktari) VALUES (19, 'Dogalgaz Faturasi', 5158.555533887522);
+INSERT INTO SABIT_GIDER (GiderID, GiderAciklamasi, GiderMiktari) VALUES (20, 'Bakim Giderleri', 7912.374571057488);
+

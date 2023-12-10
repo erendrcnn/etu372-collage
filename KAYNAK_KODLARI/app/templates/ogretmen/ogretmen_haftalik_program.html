@@ -1,0 +1,141 @@
+<!-- templates/haftalik_program.html -->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../static/assets/css/styles.css">
+
+    <title>ÖĞRETMEN PANELİ</title>
+    <link rel="shortcut icon" type="images" href="../../static/assets2/images/favicon.ico">
+</head>
+<body>
+<!-- Sidebar bg -->
+
+<!--
+<img src="../static/assets/img/sidebar-bg.jpg" alt="sidebar img" class="bg-image">
+  -->
+
+<!--=============== HEADER ===============-->
+<header class="header">
+    <div class="header__container container">
+        <div class="header__toggle" id="header-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+        <!--
+       <a href="#" class="header__logo">
+          <img src="../static/assets/img/yt-logo-full.svg" alt="">
+       </a>
+       -->
+    </div>
+</header>
+
+<!--=============== SIDEBAR ===============-->
+<div class="sidebar" id="sidebar">
+    <nav class="sidebar__container">
+        <div class="sidebar__logo">
+            <img src="../static/assets2/images/logo_vec.svg" alt="" class="sidebar__logo-img">
+            <img src="../static/assets2/images/logo_vec_text.svg" alt="" class="sidebar__logo-text">
+        </div>
+
+        <div class="sidebar__content">
+            <h3 class="sidebar__title">
+                <span>Genel</span>
+            </h3>
+
+            <div class="sidebar__list">
+
+                <a href="dashboard" class="sidebar__link active-link">
+                    <i class="ri-home-5-line"></i>
+                    <span class="sidebar__link-name">Anasayfa</span>
+                    <span class="sidebar__link-floating">Anasayfa</span>
+                </a>
+
+                <a href="kisiselBilgiler" class="sidebar__link">
+                    <i class="ri-user-3-line"></i>
+                    <span class="sidebar__link-name">Kişisel Bilgiler</span>
+                    <span class="sidebar__link-floating">Kişisel Bilgiler</span>
+                </a>
+
+                <a href="haftalikProgram" class="sidebar__link">
+                    <i class="ri-compass-3-line"></i>
+                    <span class="sidebar__link-name">Haftalık Program</span>
+                    <span class="sidebar__link-floating">Haftalık Program</span>
+                </a>
+            </div>
+
+            <h3 class="sidebar__title">
+                <span>Hesap</span>
+            </h3>
+
+            <a href="logout" class="sidebar__link">
+                <i class="ri-logout-box-r-line"></i>
+                <span class="sidebar__link-name">Logout</span>
+                <span class="sidebar__link-floating">Logout</span>
+            </a>
+        </div>
+
+        <div class="sidebar__account">
+            <!--
+        <img src="../static/assets/img/perfil.png" alt="sidebar image" class="sidebar__perfil">
+        -->
+
+            <div class="sidebar__names">
+                <h3 class="sidebar__name">{{ AktifOgrenci.Ad }}</h3>
+                <span class="sidebar__email">{{ AktifOgrenci.Email }}</span>
+            </div>
+
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+    </nav>
+</div>
+
+<!--=============== MAIN ===============-->
+<main class="main container" id="main">
+    <head>
+        <title>Haftalık Program</title>
+    </head>
+    <body>
+    <h1>Haftalık Program</h1>
+    <form method="post" action="{% url 'ogretmen_haftalik_program' %}">
+        {% csrf_token %}
+        <table border="1">
+            <tr>
+                <th>Saat</th>
+                {% for gun in gunler %}
+                    <th>{{ gun }}</th>
+                {% endfor %}
+            </tr>
+            {% for saat in saatler %}
+                <tr>
+                    <td>{{ saat }} - {{ saat|add:1 }}</td>
+                    {% for gun in gunler %}
+                        <td>
+                            {% for alinan_ders in program %}
+                                {% if alinan_ders.2 == gun %}
+                                    {% if alinan_ders.1 == saat %}
+                                        {{ alinan_ders.0 }}
+                                    {% endif %}
+                                {% else %}
+
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+    </body>
+</main>
+
+<!--=============== MAIN JS ===============-->
+<script src="../../static/assets/js/main.js"></script>
+</body>
+</html>

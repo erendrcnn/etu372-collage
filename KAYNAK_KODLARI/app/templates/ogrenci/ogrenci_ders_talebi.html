@@ -1,0 +1,73 @@
+<!-- templates/ders_listesi.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../static/assets/css/styles.css">
+
+    <title>ÖĞRENCİ PANELİ</title>
+</head>
+<body>
+<!-- Sidebar bg -->
+
+<!--
+<img src="assets/img/sidebar-bg.jpg" alt="sidebar img" class="bg-image">
+  -->
+
+<!--=============== HEADER ===============-->
+<header class="header">
+    <div class="header__container container">
+        <div class="header__toggle" id="header-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+        <!--
+       <a href="#" class="header__logo">
+          <img src="assets/img/yt-logo-full.svg" alt="">
+       </a>
+       -->
+    </div>
+</header>
+
+{% include 'ogrenci/ogrenci_sidebar.html' %}
+
+<div class="sidebar__account">
+
+    <div class="sidebar__names">
+        <h3 class="sidebar__name">{{ AktifOgrenci.Ad }}</h3>
+        <span class="sidebar__email">{{ AktifOgrenci.Email }}</span>
+    </div>
+
+    <i class="ri-arrow-right-s-line"></i>
+</div>
+</nav>
+</div>
+
+<!--=============== MAIN ===============-->
+<main class="main container" id="main">
+    <head>
+        <title>Ders Listesi</title>
+    </head>
+    <body>
+    <h1>Ders Listesi</h1>
+    <form method="post" action="{% url 'ogrenci_ders_talebi' %}">
+        {% csrf_token %}
+        {% for ders in dersler %}
+            <input type="checkbox" name="dersler" value="{{ ders.2 }}"
+                   {% if ders.2 in secili_dersler %}checked{% endif %}> {{ ders.2 }}<br>
+        {% endfor %}
+        <input type="submit" value="Kaydet">
+    </form>
+
+    </body>
+</main>
+
+<!--=============== MAIN JS ===============-->
+<script src="../../static/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../static/assets/css/styles.css">
+
+    <title>ÖĞRENCİ PANELİ</title>
+    <link rel="shortcut icon" type="images" href="../../static/assets2/images/favicon.ico">
+</head>
+<body>
+<!-- Sidebar bg -->
+
+<!--
+<img src="../static/assets/img/sidebar-bg.jpg" alt="sidebar img" class="bg-image">
+  -->
+
+<!--=============== HEADER ===============-->
+<header class="header">
+    <div class="header__container container">
+        <div class="header__toggle" id="header-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <!--
+       <a href="#" class="header__logo">
+          <img src="../static/assets/img/yt-logo-full.svg" alt="">
+       </a>
+       -->
+    </div>
+</header>
+
+{% include 'ogrenci/ogrenci_sidebar.html' %}
+
+<!--=============== MAIN ===============-->
+<main class="main container" id="main">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Öğrenci Bilgileri</title>
+        <style>
+            .info-box {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    <form method="post" action="{% url 'ogrenci_bilgileri_duzenle' ogrenci.OgrenciID %}">
+        {% csrf_token %}
+        <div class="info-box">
+            <h1>Öğrenci Bilgileri</h1>
+            <div>
+                <label for="id_ad">Ad:</label>
+                <input type="text" id="id_ad" name="ad" value="{{ ogrenci.Ad }}" required>
+            </div>
+            <div>
+                <label for="id_soyad">Soyad:</label>
+                <input type="text" id="id_soyad" name="soyad" value="{{ ogrenci.Soyad }}" required>
+            </div>
+            <div>
+                <label for="id_numara">Numara:</label>
+                <input type="text" id="id_numara" name="numara" value="{{ ogrenci.Numara }}" required>
+            </div>
+            <div>
+                <label for="id_telefon">Telefon:</label>
+                <input type="text" id="id_telefon" name="telefon" value="{{ ogrenci.Tel }}" required>
+            </div>
+            <div>
+                <label for="id_adres">Adres:</label>
+                <input type="text" id="id_adres" name="adres" value="{{ ogrenci.Adres }}" required>
+            </div>
+            <div>
+                <label for="id_gpa">GPA:</label>
+                <input type="text" id="id_gpa" name="gpa" value="{{ ogrenci.GPA }}" required>
+            </div>
+
+        </div>
+        <div class="info-box">
+            <h2>Veli Bilgileri</h2>
+            <div>
+                <label for="id_veli_adi">Veli Adı:</label>
+                <input type="text" id="id_veli_adi" name="veli_adi" value="{{ ogrenci.veli.VeliAdi }}" required>
+            </div>
+            <div>
+                <label for="id_veli_soyadi">Veli Soyadı:</label>
+                <input type="text" id="id_veli_soyadi" name="veli_soyadi" value="{{ ogrenci.veli.VeliSoyadi }}"
+                       required>
+            </div>
+            <div>
+                <label for="id_veli_telefon">Veli Telefon:</label>
+                <input type="text" id="id_veli_telefon" name="veli_telefon" value="{{ ogrenci.veli.VeliTel }}" required>
+            </div>
+            <div>
+                <label for="id_veli_email">Veli E-Mail:</label>
+                <input type="text" id="id_veli_email" name="veli_email" value="{{ ogrenci.veli.VeliEmail }}" required>
+            </div>
+
+        </div>
+        <input type="submit" value="Düzenle">
+    </form>
+    </body>
+</main>
+
+<!--=============== MAIN JS ===============-->
+<script src="../../static/assets/js/main.js"></script>
+</body>
+</html>
