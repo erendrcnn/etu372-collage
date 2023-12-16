@@ -105,19 +105,20 @@ Make sure you have the following prerequisites installed on your machine:
 
 ### Installation
 
-1. Create a virtual environment and activate it:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+2. Create a virtual environment and activate it:
    ```sh
    python -m venv venv
    C:\...\Project372\venv\Scripts\activate
-2. Install required Python packages:
+3. Install required Python packages:
    ```sh
    pip install django
+   pip install django-extensions
    pip install mysql
    pip install mysql-connector-python
-   ```
-3. Clone the repository:
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
    ```
 4. Create the MySQL database. (MySQL Comment Line Client)
    ```sh
