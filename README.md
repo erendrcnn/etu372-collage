@@ -75,6 +75,7 @@ ETU372 is a modern, user-friendly solution developed to meet the diverse needs o
 
 ## Screenshots
 
+[![Product Name Screen Shot3][product-screenshot3]](https://github.com/erendrcnn/etu372-collage/)
 [![Product Name Screen Shot1][product-screenshot1]](https://github.com/erendrcnn/etu372-collage/)
 [![Product Name Screen Shot2][product-screenshot2]](https://github.com/erendrcnn/etu372-collage/)
 
@@ -254,7 +255,7 @@ Project Link: [https://github.com/erendrcnn/etu372-collage](https://github.com/e
 [product-screenshot]: GORSELLER/screenshot.png
 [product-screenshot1]: GORSELLER/ÖĞRETMEN_KİŞİSEL_BİLGİLER.png
 [product-screenshot2]: GORSELLER/ÖĞRENCİ_HAFTALIK_PROGRAM.png
-[product-screenshot3]: GORSELLER/İDARE_OKUL_VERİTABANI.png
+[product-screenshot3]: GORSELLER/GİRİŞ_PANELİ.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
